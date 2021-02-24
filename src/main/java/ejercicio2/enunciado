@@ -1,0 +1,46 @@
+ENUNCIADO:
+
+Se tiene un metodo para calcular la hora y fecha siguiente, dado que tenemos como 6 parametro
+
+DAY, MONTH, YEAR (no acepta negative year), HOUR, MINUTE, SECOND
+
+por ejemplo si yo le envio
+
+25 Febrero 2020  23 55 59 ------>  25 Febrero 2020 23:56:00
+
+- Invalid Day : NN
+- Invalid Month : NN
+- Invalid Year : NN
+- Invalid Hour : NN
+- Invalid Minute : NN
+- Invalid Second : NN
+
+
+NOTA: No usar la clase Date de java para realizar el proceso.
+
+COVERTURA DE PRUEBAS:
+
+Boundary Test: Testeo de Limites día (horas)
+
+                  | ------------------------------------------------- | ------------------------------------------------------------------------|
+(seg: -1) 1/enero/2000 00:00:00 (seg: 1)          (seg: 11:59:59)  15/julio/2021 12:00:00 (seg: 13:00:00)      (seg: 23:59:58) 31/diciembre/2021 23:59:59 1/enero/2022 00:00:00
+
+
+Test 1 ----  1/ene/1 00:00:00 (positive test)
+Test 2 ---- 15/jul/2021 12:00:00 (positive test)
+Test 3 ---- 30/feb/2021 12:00:00 (negative test)
+Test 4 ---- 33/sep/2021 12:00:00 (negative test)
+Test 5 ---- -30/feb/-2021 12:00:00 (negative test)
+Test 6 ---- -30/feb/2021 12:00:00 (negative test)
+Test 7 ---- 31/dic/2021 23:59:58 (positive test)
+Test 8 ---- 1/ene/2022 00:00:00 (positive test)
+Test 9 ---- 51 (positive test)
+
+RETURN :
+
+00:00:00 - 23:59:59  hora es : NN -----> 00:00:00 --- 23:59:59
+01/01/2000 - 31/01/2000  mes es  : NN ---->  01/01/2000 --- 31/01/2000
+2000 - 2021  Bien su nota es : NN  ----> 2000 --- 2021
+*** INGRESE DATOS CORRECTOS ***
+
+
